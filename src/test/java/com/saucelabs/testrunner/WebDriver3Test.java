@@ -12,6 +12,7 @@ import org.testng.Assert;
 import java.lang.reflect.Method;
 import java.util.Map;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
 
@@ -46,6 +47,7 @@ public class WebDriver3Test {
         this.driver = new RemoteWebDriver(
                 new URL("http://" + username + ":" + key + "@ondemand.saucelabs.com:80/wd/hub"),
                 capabilities);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         this.jobId = ((RemoteWebDriver) driver).getSessionId().toString();
     }
 
