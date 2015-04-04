@@ -25,6 +25,7 @@ public class WebDriver5Test {
 
     private WebDriver driver;
     String jobId;
+    boolean passed = false;
     private SauceREST sauceREST;
 
     /**
@@ -52,14 +53,19 @@ public class WebDriver5Test {
     }
 
     @Test
-    public void webDriver5() throws Exception {
+    public void webDriver1() throws Exception {
         driver.get("http://www.amazon.com/");
         Assert.assertEquals(driver.getTitle(), "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
-    }
+        passed = true
+     }
 
     @AfterMethod
     public void tearDown() throws Exception {
-        sauceREST.jobPassed(jobId);
+        if(passed) {
+          sauceREST.jobPassed(jobId);
+        } else {
+          sauceREST.jobFailed(jobId);
+        }
         driver.quit();
     }
 }
