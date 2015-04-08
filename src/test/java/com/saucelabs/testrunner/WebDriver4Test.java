@@ -54,8 +54,8 @@ public class WebDriver4Test {
 
     @Test
     public void webDriver1() throws Exception {
-        driver.get("http://www.amazon.com/");
-        Assert.assertEquals(driver.getTitle(), "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more");
+        driver.get("http://www.yahoo.com/");
+        Assert.assertEquals(driver.getTitle(), "Yahoo");
         passed = true;
      }
 
