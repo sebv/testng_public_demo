@@ -21,7 +21,7 @@ import static org.testng.Assert.assertEquals;
  *
  * @author Ross Rowe
  */
-public class WebDriver3Test {
+public class WebDriver8Test {
 
     private WebDriver driver;
     String jobId;
@@ -53,9 +53,9 @@ public class WebDriver3Test {
     }
 
     @Test
-    public void webDriver3() throws Exception {
-        driver.get("http://www.saucelabs.com/");
-        Assert.assertEquals(driver.getTitle(), "Sauce Labs: Selenium Testing, Mobile Testing, JS Unit Testing and More");
+    public void webDriver8() throws Exception {
+        driver.get("http://www.newyorker.com/");
+        Assert.assertEquals(driver.getTitle(), "The Californian");
         passed = true;
      }
 

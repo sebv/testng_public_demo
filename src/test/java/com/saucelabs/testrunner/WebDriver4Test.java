@@ -53,7 +53,7 @@ public class WebDriver4Test {
     }
 
     @Test
-    public void webDriver1() throws Exception {
+    public void webDriver4() throws Exception {
         driver.get("http://www.yahoo.com/");
         Assert.assertEquals(driver.getTitle(), "Yahoo");
         passed = true;
